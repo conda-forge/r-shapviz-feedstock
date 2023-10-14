@@ -1,4 +1,4 @@
-{% set version = '0.9.1' %}
+{% set version = "0.9.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shapviz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shapviz/shapviz_{{ version }}.tar.gz
-  sha256: 6a6b3248788441fa3a08ccf000f7f56df85a61a4be24ac2bab2854ea5c7373d1
+  sha256: 0cf81c3b79a69256d26838f530283a78b46e8c0c301c8fecebdfa6ceeb0f66f1
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -51,15 +51,9 @@ test:
 about:
   home: https://github.com/ModelOriented/shapviz
   license: GPL-2.0-or-later
-  summary: Visualizations for SHAP (SHapley Additive exPlanations), such as waterfall plots,
-    force plots, various types of importance plots, dependence plots, and interaction
-    plots.  These plots act on a 'shapviz' object created from a matrix of SHAP values
-    and a corresponding feature dataset. Wrappers for the R packages 'xgboost', 'lightgbm',
-    'fastshap', 'shapr', 'h2o', 'treeshap', 'DALEX', and 'kernelshap' are added for
-    convenience.  By separating visualization and computation, it is possible to display
-    factor variables in graphs, even if the SHAP values are calculated by a model that
-    requires numerical features. The plots are inspired by those provided by the 'shap'
-    package in Python, but there is no dependency on it.
+  summary: Visualizations for SHAP (SHapley Additive exPlanations), such as waterfall plots, force plots, various types of importance plots, dependence plots, and interaction plots.  These plots act on a 'shapviz' object created from a matrix of SHAP values and a corresponding feature dataset. Wrappers for the R packages
+    'xgboost', 'lightgbm', 'fastshap', 'shapr', 'h2o', 'treeshap', 'DALEX', and 'kernelshap' are added for convenience.  By separating visualization and computation, it is possible to display factor variables in graphs, even if the SHAP values are calculated by a model that requires numerical features. The plots are inspired
+    by those provided by the 'shap' package in Python, but there is no dependency on it.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
