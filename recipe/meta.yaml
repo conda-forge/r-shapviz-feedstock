@@ -1,4 +1,4 @@
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shapviz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shapviz/shapviz_{{ version }}.tar.gz
-  sha256: 476252536af78ce113e104dc6fdfca07be46aa8aa6bd23fc5311af7e1323e292
+  sha256: bc0d4bb3d601dc3c38797bee2c6b505f333d556beb247adb8a08996208ffb374
 
 build:
   merge_build_host: true  # [win]
