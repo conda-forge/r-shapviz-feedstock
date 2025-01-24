@@ -1,6 +1,5 @@
 {% set version = "0.9.7" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-shapviz
@@ -13,8 +12,7 @@ source:
   sha256: bc0d4bb3d601dc3c38797bee2c6b505f333d556beb247adb8a08996208ffb374
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
