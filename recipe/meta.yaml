@@ -1,4 +1,4 @@
-{% set version = "0.9.7" %}
+{% set version = "0.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shapviz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shapviz/shapviz_{{ version }}.tar.gz
-  sha256: bc0d4bb3d601dc3c38797bee2c6b505f333d556beb247adb8a08996208ffb374
+  sha256: f125d16f6e429eec502b357930a7e4592af0cf9d1554ace3956053b9a6e15210
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
