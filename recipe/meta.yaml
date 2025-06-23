@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shapviz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shapviz/shapviz_{{ version }}.tar.gz
-  sha256: f125d16f6e429eec502b357930a7e4592af0cf9d1554ace3956053b9a6e15210
+  sha256: 212eeacd09186cf130c105c19d35e8f1e07592aafeb789e852a0e812d597832d
 
 build:
   number: 0
